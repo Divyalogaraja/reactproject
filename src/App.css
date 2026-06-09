@@ -1,0 +1,230 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f5f1e8;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+color:#6F4E37;
+}
+
+.hero{
+background:#8B5E3C;
+color:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.hero h2{
+font-size:70px;
+}
+
+.xp-bar{
+width:100%;
+height:20px;
+background:white;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.xp-fill{
+height:100%;
+background:gold;
+transition:0.5s;
+}
+
+.add-box{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+input{
+flex:1;
+padding:12px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+border:none;
+padding:10px 15px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.add-box button{
+background:#6F4E37;
+color:white;
+}
+
+.task-card{
+background:white;
+padding:15px;
+margin-bottom:10px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.complete{
+background:green;
+color:white;
+margin-right:10px;
+}
+
+.delete{
+background:red;
+color:white;
+}
+
+@media(max-width:600px){
+
+.task-card{
+flex-direction:column;
+gap:10px;
+}
+
+.add-box{
+flex-direction:column;
+}
+
+}
+.timer-card{
+background:#8B5E3C;
+color:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.timer-card h1{
+font-size:50px;
+margin:15px 0;
+}
+
+.timer-buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.timer-buttons button{
+background:#F5F1E8;
+color:#6F4E37;
+font-weight:bold;
+}
+.preset-buttons{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.preset-buttons button{
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #6F4E37;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.preset-buttons button:hover{
+  transform: scale(1.05);
+  background: #8B5E3C;
+}
+.game-stats{
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.streak-card{
+  flex: 1;
+  background: #6F4E37;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.achievement-card{
+  flex: 2;
+  background: #8B5E3C;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.badge{
+  background: gold;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+.floating-xp-container{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  pointer-events: none;
+}
+
+.floating-xp{
+  background: gold;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  animation: floatUp 1s ease-out;
+}
+
+@keyframes floatUp{
+  0%{ transform: translateY(0); opacity: 1; }
+  100%{ transform: translateY(-50px); opacity: 0; }
+}
+.dark{
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark .hero{
+  background: #333;
+}
+
+.dark .timer-card,
+.dark .task-card,
+.dark .achievement-card{
+  background: #2a2a2a;
+  color: white;
+}
