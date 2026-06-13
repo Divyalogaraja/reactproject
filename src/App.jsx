@@ -152,6 +152,26 @@ useEffect(() => {
     </div>
   ))}
 </div>
+<div className="stats-grid">
+
+  <div className="stat-card">
+    <h4>Focus Warrior</h4>
+    <h3>⭐ XP</h3>
+    <p>{xp}</p>
+  </div>
+
+  <div className="stat-card">
+    <h3>🎯 Level</h3>
+    <p>{level}</p>
+  </div>
+
+  <div className="stat-card">
+    
+    <h3>📋 Today's Missions</h3>
+    <p>{tasks.length}</p>
+  </div>
+
+</div>
       <h1>🎮 FocusQuest</h1>
 
       {/* HERO */}
@@ -174,7 +194,8 @@ useEffect(() => {
   <div className="streak-card">
     🔥 Daily Streak: {streak} days
   </div>
-
+<div className ="dashboard-grid">
+  <div>
   <div className="achievement-card">
     <h3>🏆 Achievements</h3>
 
@@ -189,11 +210,12 @@ useEffect(() => {
     ))}
 
   </div>
-
+</div>
 </div>
       {/* TIMER */}
+      <div>
       <div className="timer-card">
-        <h2>⏲️ Pomodoro Timer</h2>
+        <h2>⏲️ Focus Session</h2>
 
         {/* STEP 5: PRESET BUTTONS */}
         <div className="preset-buttons">
@@ -215,7 +237,8 @@ useEffect(() => {
           </button>
           <br />
         </div>
-
+</div>
+</div>
         {/* Custom input */}
         <div className="time-input">
           <label>Pomodoro Time (minutes): </label>
